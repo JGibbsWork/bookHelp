@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const morgane = require('morgan');
+const morgan = require('morgan');
 const path = require('path');
+const googleTrends = require('google-trends-api');
 const cors = require('cors');
 const router = require('./router.js');
 
@@ -21,7 +22,7 @@ server.use((req, res, next) => {
 // remove this before deployment
 server.use(morgan('dev'));
 
-server.use(express.static(path.join(__dirname, '../client/dist')));
-server.use('/api', router)
+server.use(express.static(path.join(__dirname, '../Frontend/dist')));
+server.use('/', router);
 
 server.listen(port, () => (console.log(`we're in boys`)));

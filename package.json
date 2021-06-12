@@ -2,9 +2,10 @@
   "name": "bookhelp",
   "version": "1.0.0",
   "description": "Tool to aggregate data for use in booking talent",
-  "main": "index.js",
+  "main": "Backend/server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/JGibbsWork/bookHelp/issues"
   },
-  "homepage": "https://github.com/JGibbsWork/bookHelp#readme"
+  "homepage": "https://github.com/JGibbsWork/bookHelp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "google-trends-api": "^4.9.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
+  }
 }
