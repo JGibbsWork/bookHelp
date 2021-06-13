@@ -1,0 +1,30 @@
+const DMA = {
+'New York': 'US-NY-501',
+'Los Angeles': 'US-CA-803',
+'Chicago': 'US-IL-602',
+'Philadelphia': 'US-PA-504',
+'Boston (Manchester)': 'US-MA-506',
+'San Francisco - Oakland - San Jose': 'US-CA-807',
+'Dallas - Fort Worth': 'US-TX-623',
+'Atlanta': 'US-GA-524',
+'Houston': 'US-TX-618',
+'Detroit': 'US-MI-505',
+'Tampa - Saint Petersburg (Sarasota)': 'US-FL-539',
+'Seattle - Tacoma': 'US-WA-819',
+'Phoenix': 'US-AZ-753',
+'Cleveland': 'US-OH-510',
+'Miami - Fort Lauderdale': 'US-FL-528',
+'Denver': 'US-CO-751',
+'Sacramento - Stockton - Modesto': 'US-CA-862',
+'Portland': 'US-OR-820',
+'San Diego': 'US-CA-825',
+'Nashville': 'US-TN-659',
+'San Antonio': 'US-TX-641',
+'New Orleans': 'US-LA-622',
+'Las Vegas': 'US-NV-839',
+'Austin': 'US-TX-635',
+'Reno': 'US-NV-811',
+'Palm Springs': 'US-CA-804'
+}
+
+module.exports = DMA
