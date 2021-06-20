@@ -2,7 +2,7 @@ const router = require('express').Router();
 const controller = require('./controller.js');
 
 router
-.route('/825/:id')
+.route('/:city/:id')
 .get(controller.get)
 
 

@@ -1,4 +1,5 @@
 const googleTrends = require('google-trends-api');
+const DMA = require('./DMA.js');
 
 const controller = {
   get: (req, res) => {
@@ -6,8 +7,9 @@ const controller = {
     let resultState = [];
     let resultCountry = [];
     let search = req.params.id.split('+')
+    let city = DMA[req.params.city]
     search = search.join(' ');
-    googleTrends.interestOverTime({keyword: search, startTime: new Date('2018-01-01'), geo: ['US', 'US-CA', "825"]})
+    googleTrends.interestOverTime({keyword: search, startTime: new Date('2018-01-01'), geo: ['US', city[1], city[0]]})
     .then((results) => {
       JSON.parse(results).default.timelineData.map((data, i) => {
         resultLocal.push({
