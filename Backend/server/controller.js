@@ -25,12 +25,11 @@ const controller = {
           'value': data.value[0]
         })
       })
-      console.log('These results are awesome', resultLocal, resultState, resultCountry)
+      res.status(200).json(resultLocal, resultState, resultCountry)
     })
     .catch((err) => {
       console.log('ah damn', err)
     })
-    res.send('ya')
   }
 }
 
