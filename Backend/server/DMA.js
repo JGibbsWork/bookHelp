@@ -5,7 +5,7 @@ const DMA = {
 'Philadelphia': ['US-PA-504', 'US-PA'],
 'Boston (Manchester)': ['US-MA-506', 'US-MA'],
 'San Francisco - Oakland - San Jose': ['US-CA-807', 'US-CA'],
-'Dallas - Fort Worth': ['US-TX-623', ''],
+'Dallas - Fort Worth': ['US-TX-623', 'US-TX'],
 'Atlanta': ['US-GA-524', 'US-GA'],
 'Houston': ['US-TX-618', 'US-TX'],
 'Detroit': ['US-MI-505', 'US-MI'],

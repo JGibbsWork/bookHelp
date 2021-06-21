@@ -1,0 +1,30 @@
+const DMA = [
+'New York',
+'Los Angeles',
+'Chicago',
+'Philadelphia',
+'Boston (Manchester)',
+'San Francisco - Oakland - San Jose',
+'Dallas - Fort Worth',
+'Atlanta',
+'Houston',
+'Detroit',
+'Tampa - Saint Petersburg (Sarasota)',
+'Seattle - Tacoma',
+'Phoenix',
+'Cleveland',
+'Miami - Fort Lauderdale',
+'Denver',
+'Sacramento - Stockton - Modesto',
+'Portland',
+'San Diego',
+'Nashville',
+'San Antonio',
+'New Orleans',
+'Las Vegas',
+'Austin',
+'Reno',
+'Palm Springs'
+]
+
+module.exports = DMA

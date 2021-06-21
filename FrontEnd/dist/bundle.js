@@ -305,25 +305,57 @@ eval("\n\nvar bind = __webpack_require__(/*! ./helpers/bind */ \"./node_modules/
 
 /***/ }),
 
-/***/ "./FrontEnd/src/app.jsx":
-/*!******************************!*\
-  !*** ./FrontEnd/src/app.jsx ***!
-  \******************************/
+/***/ "./FrontEnd/src/components/CitySelect.js":
+/*!***********************************************!*\
+  !*** ./FrontEnd/src/components/CitySelect.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ BookHelp)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);\n\n\nfunction BookHelp() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h1\", null, \"YOOOOO\");\n}\n\n//# sourceURL=webpack://bookhelp/./FrontEnd/src/app.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ CitySelect)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _cityList_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cityList.js */ \"./FrontEnd/src/components/cityList.js\");\n/* harmony import */ var _cityList_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_cityList_js__WEBPACK_IMPORTED_MODULE_1__);\n\n\nfunction CitySelect() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"form\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"select\", null, _cityList_js__WEBPACK_IMPORTED_MODULE_1___default().map(function (value, idx) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"option\", {\n      key: idx\n    }, value);\n  })));\n}\n\n//# sourceURL=webpack://bookhelp/./FrontEnd/src/components/CitySelect.js?");
 
 /***/ }),
 
-/***/ "./FrontEnd/src/index.jsx":
-/*!********************************!*\
-  !*** ./FrontEnd/src/index.jsx ***!
-  \********************************/
+/***/ "./FrontEnd/src/components/SearchTerm.js":
+/*!***********************************************!*\
+  !*** ./FrontEnd/src/components/SearchTerm.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _app_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.jsx */ \"./FrontEnd/src/app.jsx\");\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_app_jsx__WEBPACK_IMPORTED_MODULE_2__.default, null), document.getElementById('BookHelp'));\n\n//# sourceURL=webpack://bookhelp/./FrontEnd/src/index.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ SearchTerm)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction SearchTerm() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"form\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", {\n    type: \"text\"\n  }));\n}\n\n//# sourceURL=webpack://bookhelp/./FrontEnd/src/components/SearchTerm.js?");
+
+/***/ }),
+
+/***/ "./FrontEnd/src/components/app.js":
+/*!****************************************!*\
+  !*** ./FrontEnd/src/components/app.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ BookHelp)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _CitySelect_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CitySelect.js */ \"./FrontEnd/src/components/CitySelect.js\");\n/* harmony import */ var _SearchTerm_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SearchTerm.js */ \"./FrontEnd/src/components/SearchTerm.js\");\n\n\n\n\nfunction BookHelp() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h1\", null, \"Book Help\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CitySelect_js__WEBPACK_IMPORTED_MODULE_2__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SearchTerm_js__WEBPACK_IMPORTED_MODULE_3__.default, null));\n}\n\n//# sourceURL=webpack://bookhelp/./FrontEnd/src/components/app.js?");
+
+/***/ }),
+
+/***/ "./FrontEnd/src/components/cityList.js":
+/*!*********************************************!*\
+  !*** ./FrontEnd/src/components/cityList.js ***!
+  \*********************************************/
+/***/ ((module) => {
+
+eval("var DMA = ['New York', 'Los Angeles', 'Chicago', 'Philadelphia', 'Boston (Manchester)', 'San Francisco - Oakland - San Jose', 'Dallas - Fort Worth', 'Atlanta', 'Houston', 'Detroit', 'Tampa - Saint Petersburg (Sarasota)', 'Seattle - Tacoma', 'Phoenix', 'Cleveland', 'Miami - Fort Lauderdale', 'Denver', 'Sacramento - Stockton - Modesto', 'Portland', 'San Diego', 'Nashville', 'San Antonio', 'New Orleans', 'Las Vegas', 'Austin', 'Reno', 'Palm Springs'];\nmodule.exports = DMA;\n\n//# sourceURL=webpack://bookhelp/./FrontEnd/src/components/cityList.js?");
+
+/***/ }),
+
+/***/ "./FrontEnd/src/index.js":
+/*!*******************************!*\
+  !*** ./FrontEnd/src/index.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _components_app_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/app.js */ \"./FrontEnd/src/components/app.js\");\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_app_js__WEBPACK_IMPORTED_MODULE_2__.default, null), document.getElementById('BookHelp'));\n\n//# sourceURL=webpack://bookhelp/./FrontEnd/src/index.js?");
 
 /***/ }),
 
@@ -498,7 +530,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./FrontEnd/src/index.jsx");
+/******/ 	var __webpack_exports__ = __webpack_require__("./FrontEnd/src/index.js");
 /******/ 	
 /******/ })()
 ;
