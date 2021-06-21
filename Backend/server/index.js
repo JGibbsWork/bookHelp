@@ -22,7 +22,12 @@ server.use((req, res, next) => {
 // remove this before deployment
 server.use(morgan('dev'));
 
-server.use(express.static(path.join(__dirname, '../Frontend/dist')));
+server.use(express.static(path.join(__dirname, '../../FrontEnd/dist/')));
 server.use('/', router);
+
+server.get('/', function (req, res) {
+  res.sendFile('index.html', { root: path.join(__dirname, '../../FrontEnd/dist/') });
+});
+
 
 server.listen(port, () => (console.log(`we're in boys`)));

@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, './FrontEnd/src/index.jsx'),
+  entry: path.join(__dirname, './FrontEnd/src'),
   output: {
-    path: path.resolve(__dirname, './FrontEnd/dist'),
+    path: path.join(__dirname, './FrontEnd/dist'),
     filename: 'bundle.js',
   },
   mode: 'development',
@@ -11,7 +11,8 @@ module.exports = {
     rules: [
       {
         loader: 'babel-loader',
-        test: /\.js[x]?/,
+        test: /\.js$/,
+        include: path.join(__dirname, './FrontEnd/src'),
         exclude: /node_modules/,
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
