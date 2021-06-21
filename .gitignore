@@ -74,3 +74,6 @@ typings/
 
 # FuseBox cache
 .fusebox/
+
+#Bundle file
+FrontEnd/dist/bundle.js
