@@ -6,8 +6,8 @@ export default function SearchIt (props) {
   function trends () {
     let city = props.city.replace(/\s/g, '+');
     let search = props.search.replace(/\s/g, '+');
-    axios.get(`/${city}/${search}`)
-      .then((results) => {console.log(results)})
+    axios.post(`/${city}/${search}`)
+      .then(() => {console.log('suppppp')})
   }
 
   return (

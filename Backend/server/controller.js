@@ -1,13 +1,16 @@
 const googleTrends = require('google-trends-api');
+const db = require('../db/models.js');
 const DMA = require('./DMA.js');
 
 const controller = {
-  get: (req, res) => {
+
+  newSearch: (req, res) => {
     let resultLocal = [];
     let resultState = [];
     let resultCountry = [];
     let search = req.params.id.split('+')
-    let citySep = req.params.city.split('+')
+    let citySep = req.params.city.split('+');
+    citySep = citySep.join(' ');
     let city = DMA[citySep]
     search = search.join(' ');
     googleTrends.interestOverTime({keyword: search, startTime: new Date('2018-01-01'), geo: ['US', city[1], city[0]]})
@@ -26,12 +29,54 @@ const controller = {
           'value': data.value[0]
         })
       })
-      res.status(200).json(resultLocal, resultState, resultCountry)
     })
+    .then(() => {
+      db.post({
+        searchDate: new Date(),
+        city: citySep,
+        term: search,
+        localResults: resultLocal,
+        stateResults: resultState,
+        nationalResults: resultCountry
+      })
+      res.status(200).json('did it')
+    })
+
     .catch((err) => {
-      console.log('ah damn', err)
+      console.log('ah damn dude', err)
+    })
+  },
+
+  getCity: (req, res) =>{
+    db.getCity(req.body.city)
+    .then((results)=>(
+      res.status(200).json(results)
+    ))
+    .catch((err) => {
+      console.log('crap dude', err)
+    })
+  },
+
+  getTerm: (req, res) =>{
+    db.getTerm(req.body.term)
+    .then((results)=>(
+      res.status(200).json(results)
+    ))
+    .catch((err) => {
+      console.log('fuck dude', err)
+    })
+  },
+
+  getAll: (req, res) =>{
+    db.get()
+    .then((results)=>(
+      res.status(200).json(results)
+    ))
+    .catch((err) => {
+      console.log('shit dude', err)
     })
   }
+
 }
 
 module.exports = controller

@@ -2,10 +2,12 @@ const router = require('express').Router();
 const controller = require('./controller.js');
 
 router
-.route('/:city/:id')
-.get(controller.get)
+  .route('/:city/:id')
+  .post(controller.newSearch)
 
+router
+  .route('/results/:city')
+  .get(controller.getCity)
 
-// https://help-ooyala.brightcove.com/sites/all/libraries/dita/en/video-platform/reference/dma_codes.html
 
 module.exports = router
