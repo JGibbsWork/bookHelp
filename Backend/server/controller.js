@@ -7,7 +7,8 @@ const controller = {
     let resultState = [];
     let resultCountry = [];
     let search = req.params.id.split('+')
-    let city = DMA[req.params.city]
+    let citySep = req.params.city.split('+')
+    let city = DMA[citySep]
     search = search.join(' ');
     googleTrends.interestOverTime({keyword: search, startTime: new Date('2018-01-01'), geo: ['US', city[1], city[0]]})
     .then((results) => {

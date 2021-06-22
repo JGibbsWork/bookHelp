@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function SearchTerm () {
+export default function SearchTerm (props) {
   return (
     <form>
-      <input type='text'/>
+      <input type='text' onChange={props.onChange}/>
     </form>
   )
 }
