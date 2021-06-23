@@ -6,8 +6,16 @@ router
   .post(controller.newSearch)
 
 router
-  .route('/results/:city')
+  .route('/results/city/:city')
   .get(controller.getCity)
+
+router
+  .route('/results/term/:city')
+  .get(controller.getCity)
+
+router
+  .route('/results/all')
+  .get(controller.getAll)
 
 
 module.exports = router

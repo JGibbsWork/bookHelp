@@ -13,7 +13,7 @@ const controller = {
     citySep = citySep.join(' ');
     let city = DMA[citySep]
     search = search.join(' ');
-    googleTrends.interestOverTime({keyword: search, startTime: new Date('2018-01-01'), geo: ['US', city[1], city[0]]})
+    googleTrends.interestOverTime({keyword: search, startTime: new Date('2020-01-01'), geo: ['US', city[1], city[0]]})
     .then((results) => {
       JSON.parse(results).default.timelineData.map((data, i) => {
         resultLocal.push({
@@ -48,7 +48,7 @@ const controller = {
   },
 
   getCity: (req, res) =>{
-    db.getCity(req.body.city)
+    db.getCity(req.params.city)
     .then((results)=>(
       res.status(200).json(results)
     ))
@@ -58,7 +58,7 @@ const controller = {
   },
 
   getTerm: (req, res) =>{
-    db.getTerm(req.body.term)
+    db.getTerm(req.params.term)
     .then((results)=>(
       res.status(200).json(results)
     ))
