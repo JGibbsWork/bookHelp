@@ -1,65 +1,69 @@
 import React from 'react';
-import {
-  Chart,
-  ChartSeries,
-  ChartSeriesItem,
-  ChartValueAxis,
-  ChartValueAxisItem,
-  ChartCategoryAxis,
-  ChartCategoryAxisItem,
-  ChartTitle,
-  ChartLegend,
-} from "@progress/kendo-react-charts";
+import { Line, defaults } from "react-chartjs-2";
+
+function changeToXY(arr) {
+  return arr.map(({ key1: x, key2: y, ...rest }) => ({
+    x, y, ...rest }));
+}
 
 
 export default function SingleResult (props) {
-  let localData = props.localResults.map((a) => a.value)
+
+  let localResults = props.localResults.map((a) => a.value)
   let stateResults = props.stateResults.map((a) => a.value)
   let nationalResults = props.nationalResults.map((a) => a.value)
   let range = props.localResults.map((a) => a.date)
 
-  let series = [
-    {
-      name: "Local",
-      data: localData,
-      color: "red",
-    },
-    {
-      name: "State",
-      data: stateResults,
-      color: "blue",
-    },
-    {
-      name: "National",
-      data: nationalResults,
-      color: "orange",
-    },
-  ];
-
   return (
     <>
     <h3>eeeeeeeee</h3>
-    <Chart pannable zoomable style={{ height: 1000 }}>
-      <ChartTitle text="Application status - last 3 months" />
-      <ChartLegend position="top" orientation="horizontal" />
-      <ChartValueAxis>
-        <ChartValueAxisItem title={{ text: "Job Positions" }} min={0} max={100} />
-      </ChartValueAxis>
-      <ChartCategoryAxis>
-        <ChartCategoryAxisItem categories={range} />
-      </ChartCategoryAxis>
-      <ChartSeries>
-        {series.map((item, idx) => (
-          <ChartSeriesItem
-            key={idx}
-            type="line"
-            tooltip={{ visible: true }}
-            data={item.data}
-            name={item.name}
-          />
-        ))}
-      </ChartSeries>
-    </Chart>
+    <Line
+        data={{
+          labels: range,
+          datasets: [
+            {
+              label: 'City Results',
+              data: localResults,
+              backgroundColor: 'blue',
+              borderColor: 'blue',
+              borderWidth: 1,
+            },
+            {
+              label: 'State Results',
+              data: stateResults,
+              backgroundColor: 'orange',
+              borderColor: 'orange',
+              borderWidth: 1,
+            },
+            {
+              label: 'National Results',
+              data: nationalResults,
+              backgroundColor: 'red',
+              borderColor: 'red',
+              borderWidth: 1,
+            },
+          ],
+        }}
+        height={400}
+        width={600}
+        options={{
+          maintainAspectRatio: true,
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: false,
+                },
+              },
+            ],
+          },
+          legend: {
+            labels: {
+              fontSize: 25,
+            },
+          },
+        }}
+      />
     </>
   )
 }
