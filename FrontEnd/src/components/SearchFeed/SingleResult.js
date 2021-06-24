@@ -10,12 +10,25 @@ export default function SingleResult (props) {
   let nationalResults = props.nationalResults.map((a) => a.value)
   let range = props.localResults.map((a) => a.date)
 
+  function convert(str) {
+    var date = new Date(str),
+      mnth = ("0" + (date.getMonth() + 1)).slice(-2),
+      day = ("0" + date.getDate()).slice(-2);
+    return [mnth, day, date.getFullYear()].join(" ");
+  }
+
+  let date = convert(props.searchDate);
+
   return (
     <>
     <div className = "chartCard">
-      <h4>{props.term}</h4>
-      <h4>{props.city}</h4>
-      <h4>{props.searchDate}</h4>
+      <a className="date">{date}</a>
+      <div className="cardTitle">
+        <a>RESULTS FOR: </a>
+        <a className="term">{props.term}</a>
+        <a> IN: </a>
+        <a className="city">{props.city}</a>
+      </div>
       <Line
           data={{
             labels: range,
@@ -23,20 +36,20 @@ export default function SingleResult (props) {
               {
                 label: 'City Results',
                 data: localResults,
-                backgroundColor: 'blue',
-                borderColor: 'blue',
+                backgroundColor: '#CF6766',
+                borderColor: '#CF6766',
               },
               {
                 label: 'State Results',
                 data: stateResults,
-                backgroundColor: 'orange',
-                borderColor: 'orange',
+                backgroundColor: '#30415D',
+                borderColor: '#30415D',
               },
               {
                 label: 'National Results',
                 data: nationalResults,
-                backgroundColor: 'red',
-                borderColor: 'red',
+                backgroundColor: '#8EAEBD',
+                borderColor: '#8EAEBD',
               },
             ],
           }}

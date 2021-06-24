@@ -1,11 +1,58 @@
+html{
+  background: #031424;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  padding-top: 5%;
+}
+
+.header {
+  background-color: #8EAEBD;
+  overflow: hidden;
+  position: fixed;
+  margin-left: 10%;
+  margin-right: auto;
+  top: 0;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 700;
+}
+
+h3 {
+  color: #031424;
+  letter-spacing: 0.6em;
+  font-size: x-large;
+}
+
+h3:hover {
+  color:#CF6766;
+}
 
 
+.cardTitle {
+  border-bottom: 1.5px solid #031424;
+  font-size: larger;
+}
 
+.date {
+  float: right;
+  opacity: 40%;
+}
+a.term {
+  color: #30415D;
+}
+
+a.city {
+  font-weight: 500;
+  color: #CF6766;
+}
 
 .chartCard {
   padding: 2%;
   margin: auto;
-  border:3px solid black;
+  border:3px solid #F5F5DC;
+  background: #d8d8c6;
   border-radius: 2%;
   width: 65%;
 }

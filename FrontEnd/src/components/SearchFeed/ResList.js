@@ -26,16 +26,18 @@ export default function ResList () {
   } else {
     return (
       <>
-      {history.map((res, idx) => (
-        <SingleResult
-        localResults={res.localResults}
-        stateResults={res.stateResults}
-        nationalResults={res.nationalResults}
-        searchDate={res.searchDate}
-        city={res.city}
-        term={res.term}
-				key={res._id} />
-      ))}
+      <div className="feedBox">
+        {history.map((res, idx) => (
+          <SingleResult
+          localResults={res.localResults}
+          stateResults={res.stateResults}
+          nationalResults={res.nationalResults}
+          searchDate={res.searchDate}
+          city={res.city}
+          term={res.term}
+          key={res._id} />
+        ))}
+      </div>
       </>
     )
   }
