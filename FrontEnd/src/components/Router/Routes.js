@@ -1,17 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import Header from '../Header/Header.js';
 import Feed from '../SearchFeed/Feed.js';
 import Form from '../SearchForm/form.js'
+import Home from '../Home/Home.js'
 
 export default function AppRouter () {
   return (
     <Router>
-          <Switch>
-            <Route path="/feed" component={Feed} />
-            <Route path="/post" component={Form} />
-          </Switch>
+      <Header />
+      <Switch>
+      <Route exact path="/" component={Home} />
+        <Route path="/feed" component={Feed} />
+        <Route path="/post" component={Form} />
+      </Switch>
     </Router>
   )
 }
-//<Route exact path="/" component={Home} />
