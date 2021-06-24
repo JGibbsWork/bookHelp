@@ -10,7 +10,7 @@ export default function ResList () {
     if (loading) {
       axios.get('/results/all')
       .then((results) => {
-        setHistory(results.data);
+        setHistory(results.data.reverse());
         setLoading(false);
       })
       .catch((err) => {console.log('whoop')})
@@ -26,13 +26,15 @@ export default function ResList () {
   } else {
     return (
       <>
-      <h2>WOOOOOO</h2>
       {history.map((res, idx) => (
         <SingleResult
         localResults={res.localResults}
         stateResults={res.stateResults}
         nationalResults={res.nationalResults}
-				key = {idx} />
+        searchDate={res.searchDate}
+        city={res.city}
+        term={res.term}
+				key={res._id} />
       ))}
       </>
     )

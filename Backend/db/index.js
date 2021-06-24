@@ -4,12 +4,6 @@ const mongoUri = 'mongodb://localhost/bookHelp';
 
 const client = new MongoClient(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
-
 const results = require('./results.js');
 
 mongoose.Promise = global.Promise;

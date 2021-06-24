@@ -4,6 +4,7 @@ const DMA = require('./DMA.js');
 
 const controller = {
 
+  // Use params to hit google trends api and save results to mongo databse
   newSearch: (req, res) => {
     let resultLocal = [];
     let resultState = [];
@@ -47,6 +48,7 @@ const controller = {
     })
   },
 
+  // return results based on city search
   getCity: (req, res) =>{
     db.getCity(req.params.city)
     .then((results)=>(
@@ -57,6 +59,7 @@ const controller = {
     })
   },
 
+  // return results based on search term
   getTerm: (req, res) =>{
     db.getTerm(req.params.term)
     .then((results)=>(
@@ -67,6 +70,7 @@ const controller = {
     })
   },
 
+  // return all results
   getAll: (req, res) =>{
     db.get()
     .then((results)=>(

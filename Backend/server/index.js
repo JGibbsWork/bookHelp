@@ -12,6 +12,7 @@ const server = express();
 server.use(bodyParser.json());
 server.use(cors());
 
+// CORS
 server.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Content-Type, Origin, X-Requested-With, Accept");
@@ -25,9 +26,14 @@ server.use(morgan('dev'));
 server.use(express.static(path.join(__dirname, '../../FrontEnd/dist/')));
 server.use('/', router);
 
-server.get('/', function (req, res) {
-  res.sendFile('index.html', { root: path.join(__dirname, '../../FrontEnd/dist/') });
-});
+// Serve up the site for react routes
+function returnSite (req, res) {
+  res.sendFile('index.html', { root: path.join(__dirname, '../../FrontEnd/dist/') })
+}
 
+// React Router returns
+server.get('/', returnSite);
+server.get('/feed', returnSite);
+server.get('/post', returnSite);
 
 server.listen(port, () => (console.log(`we're in boys`)));

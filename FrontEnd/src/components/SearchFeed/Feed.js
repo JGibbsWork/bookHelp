@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import ResList from './ResList.js';
 
 export default function Feed () {
@@ -8,8 +7,9 @@ export default function Feed () {
 
   return(
     <>
-    <h1>YAAAAAA</h1>
-    <ResList />
+    <div className="feed">
+      <ResList />
+    </div>
     </>
   )
 }

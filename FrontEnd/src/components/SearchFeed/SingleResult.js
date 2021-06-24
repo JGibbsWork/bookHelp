@@ -1,10 +1,6 @@
 import React from 'react';
 import { Line, defaults } from "react-chartjs-2";
 
-function changeToXY(arr) {
-  return arr.map(({ key1: x, key2: y, ...rest }) => ({
-    x, y, ...rest }));
-}
 
 
 export default function SingleResult (props) {
@@ -16,54 +12,65 @@ export default function SingleResult (props) {
 
   return (
     <>
-    <h3>eeeeeeeee</h3>
-    <Line
-        data={{
-          labels: range,
-          datasets: [
-            {
-              label: 'City Results',
-              data: localResults,
-              backgroundColor: 'blue',
-              borderColor: 'blue',
-              borderWidth: 1,
-            },
-            {
-              label: 'State Results',
-              data: stateResults,
-              backgroundColor: 'orange',
-              borderColor: 'orange',
-              borderWidth: 1,
-            },
-            {
-              label: 'National Results',
-              data: nationalResults,
-              backgroundColor: 'red',
-              borderColor: 'red',
-              borderWidth: 1,
-            },
-          ],
-        }}
-        height={400}
-        width={600}
-        options={{
-          maintainAspectRatio: true,
-          scales: {
-            yAxes: [
+    <div className = "chartCard">
+      <h4>{props.term}</h4>
+      <h4>{props.city}</h4>
+      <h4>{props.searchDate}</h4>
+      <Line
+          data={{
+            labels: range,
+            datasets: [
               {
-                ticks: {
-                  beginAtZero: false,
-                },
+                label: 'City Results',
+                data: localResults,
+                backgroundColor: 'blue',
+                borderColor: 'blue',
+              },
+              {
+                label: 'State Results',
+                data: stateResults,
+                backgroundColor: 'orange',
+                borderColor: 'orange',
+              },
+              {
+                label: 'National Results',
+                data: nationalResults,
+                backgroundColor: 'red',
+                borderColor: 'red',
               },
             ],
-          },
-          legend: {
-            labels: {
-              fontSize: 25,
+          }}
+          height={400}
+          width={600}
+          options={{
+            maintainAspectRatio: true,
+            scales: {
+              x: {
+                grid: {
+                  display: false,
+                  drawBorder: false,
+                  drawOnChartArea: false,
+                  drawTicks: false,
+                }
+              },
+              y: {
+                grid: {
+                  display: false,
+                  drawBorder: false,
+                  drawOnChartArea: false,
+                  drawTicks: false,
+                },
+              },
             },
-          },
-        }}
-      />
+            legend: {
+              labels: {
+                fontSize: 25,
+              },
+            },
+          }}
+
+        />
+    </div>
     </>
   )
 }
