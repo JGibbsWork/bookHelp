@@ -1,18 +1,22 @@
 import React from 'react';
 import axios from 'axios';
+import { Link, useHistory } from 'react-router-dom';
 
 export default function SearchIt (props) {
+  let history = useHistory();
 
   function trends () {
     let city = props.city.replace(/\s/g, '+');
     let search = props.search.replace(/\s/g, '+');
     axios.post(`/${city}/${search}`)
-      .then(() => {console.log('suppppp')})
+      .then(() => {
+        history.push('/feed');
+      })
   }
 
   return (
     <>
-      <a onClick={trends} className="submit">Check it out</a>
+      <p className="submit" onClick={trends}>Check it out</p>
     </>
   )
 }
