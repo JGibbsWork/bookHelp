@@ -18,6 +18,19 @@ h5 {
   cursor: inherit;
   margin:auto;
 }
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  display: block;
+  margin:auto;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
 /* Header things */
 .header {
   background-color: #8EAEBD;

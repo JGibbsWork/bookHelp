@@ -8,16 +8,18 @@ export default function SearchIt (props) {
   function trends () {
     let city = props.city.replace(/\s/g, '+');
     let search = props.search.replace(/\s/g, '+');
-    axios.post(`/${city}/${search}`)
-      .then(() => {
-        history.push('/feed');
-      })
+    if (city && state) {
+      axios.post(`/${city}/${search}`)
+        .then(() => {
+          history.push('/feed');
+        })
+    }
   }
 
   return (
     <>
     <div className="searchBox">
-      <p className="submit" onClick={trends}>Check it out</p>
+      <button type="submit" onClick={trends} value="Check it out">Check it out</button>
     </div>
     </>
   )
