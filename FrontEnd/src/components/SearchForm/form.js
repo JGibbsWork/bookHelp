@@ -9,7 +9,6 @@ export default function Form () {
   const [search, setSearch] = useState('');
 
   function onSelect(e) {
-    console.log(e.target.value)
     setCity(e.target.value);
   }
 
@@ -19,10 +18,12 @@ export default function Form () {
   }
 
   return (
-    <div>
-      <CitySelect onSelect={onSelect}/>
-      <SearchTerm onChange={onChange}/>
-      <SearchIt city={city} search={search}/>
+    <div className="formCard">
+      <form>
+        <CitySelect onSelect={onSelect}/>
+        <SearchTerm onChange={onChange}/>
+        <SearchIt city={city} search={search}/>
+      </form>
     </div>
   )
 }

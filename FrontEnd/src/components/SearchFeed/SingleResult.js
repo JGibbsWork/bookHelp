@@ -24,10 +24,12 @@ export default function SingleResult (props) {
     <div className = "chartCard">
       <a className="date">{date}</a>
       <div className="cardTitle">
-        <a>RESULTS FOR: </a>
-        <a className="term">{props.term}</a>
-        <a> IN: </a>
-        <a className="city">{props.city}</a>
+        <div className="firstCardInfo">
+          <a>RESULTS FOR: </a>
+          <a className="term">{props.term}</a>
+          <a> IN: </a>
+          <a className="city">{props.city}</a>
+        </div>
       </div>
       <Line
           data={{

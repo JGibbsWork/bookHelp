@@ -12,7 +12,7 @@ export default function SearchIt (props) {
 
   return (
     <>
-      <button onClick={trends}>Check it out</button>
+      <a onClick={trends} className="submit">Check it out</a>
     </>
   )
 }
