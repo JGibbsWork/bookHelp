@@ -71,22 +71,37 @@ a.city {
 }
 
 /* Search Form things */
+.formPage {
+  margin-top: 7%;
+}
+
 .formCard{
   margin: auto;
+  padding:1.7%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin:auto;
   width: 65%;
   border:3px solid #F5F5DC;
   background: #d8d8c6;
   border-radius: 2%;
 }
 h1 {
-  margin:auto;
+  margin: auto;
+  font-size: 50px;
 }
+.formSubTitle {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 p.formCard {
   width:60%;
+}
+
+label {
+  font-weight: 700;
+  margin: auto;
 }
 
 select {
@@ -99,6 +114,7 @@ select {
   font-family: inherit;
   font-size: inherit;
   cursor: inherit;
+  margin:auto;
 }
 
 .citySelect {
@@ -131,20 +147,22 @@ select {
   transition: 180ms box-shadow ease-in-out;
 }
 
-.submit{
-  display: inline-block;
-  padding: 0.25e, 1.2em;
+.searchBox{
+  margin: auto;
+  display: block;
+  width: 25%;
+  padding: 0.25em, 1.2em;
   border:0.1em solid #FFFFFF;
-  margin:0 0.3em 0.3em 0;
   border-radius:0.12em;
   box-sizing: border-box;
   text-decoration:none;
   font-weight:300;
   color:#FFFFFF;
+  background: #CF6766;
   text-align:center;
   transition: all 0.2s;
   }
-  p.submit:hover {
+  .searchBox:hover {
   color:#000000;
   background-color:#FFFFFF;
   }

@@ -16,7 +16,9 @@ export default function SearchIt (props) {
 
   return (
     <>
+    <div className="searchBox">
       <p className="submit" onClick={trends}>Check it out</p>
+    </div>
     </>
   )
 }

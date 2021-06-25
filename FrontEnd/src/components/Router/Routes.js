@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from '../Header/Header.js';
 import Feed from '../SearchFeed/Feed.js';
-import Form from '../SearchForm/form.js'
+import Form from '../SearchForm/Form.js'
 import Home from '../Home/Home.js'
 
 export default function AppRouter () {
