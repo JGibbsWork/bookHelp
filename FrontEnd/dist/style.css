@@ -73,10 +73,20 @@ a.city {
 /* Search Form things */
 .formCard{
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin:auto;
   width: 65%;
   border:3px solid #F5F5DC;
   background: #d8d8c6;
   border-radius: 2%;
+}
+h1 {
+  margin:auto;
+}
+p.formCard {
+  width:60%;
 }
 
 select {
@@ -89,17 +99,18 @@ select {
   font-family: inherit;
   font-size: inherit;
   cursor: inherit;
-  line-height: inherit;
 }
 
 .citySelect {
   width: 100%;
-  min-width: 18.6em;
+  min-width: 23.5em;
   max-width: 30ch;
+  height: auto;
   border: 1px solid var(--select-border);
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
-  font-size: 1.25rem;
+  font-size: 16px;
+  font-size: Max(16px, 1em);
   cursor: pointer;
   line-height: 1.1;
   background-color: #fff;
