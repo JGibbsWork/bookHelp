@@ -6,7 +6,18 @@ html{
 body {
   padding-top: 5%;
 }
-
+h5 {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  margin:auto;
+}
 /* Header things */
 .header {
   background-color: #8EAEBD;
@@ -68,6 +79,61 @@ a.city {
   background: #d8d8c6;
   border-radius: 2%;
   width: 65%;
+}
+
+/* Home Page things*/
+.homeMain {
+  width: 80%;
+  margin: auto;
+}
+.Title{
+  font-size: 7vw;
+  width: 40%;
+  margin:auto;
+  font-weight: 700;
+  color: #CF6766;
+  text-shadow: 1px 1px 1px #8EAEBD, 3px 3px 5px #30415D;
+}
+.boxTitle {
+  font-weight: 700;
+  font-size: 2vw;
+  text-align: center;
+}
+.topBox{
+  width:55%;
+  background: #d8d8c6;
+  border: 10px solid #CF6766;
+  margin:3%;
+  margin-bottom: 3%;
+  float: left;
+  box-shadow:
+    inset 0 0 0 8px #8EAEBD;
+  padding:1%;
+}
+.midBox{
+  width:55%;
+  background: #d8d8c6;
+  border:10px solid #8EAEBD;
+  margin-bottom: 3%;
+  float: right;
+  box-shadow:
+    inset 0 0 0 8px #CF6766;
+  padding:1%;
+}
+.bottomBox{
+  width:55%;
+  background: #d8d8c6;
+  border:10px solid #CF6766;
+  margin-bottom: 3%;
+  float: left;
+  box-shadow:
+    inset 0 0 0 8px #8EAEBD;
+  padding:1%;
+}
+
+.textBox {
+  width: 85%;
+  margin: auto;
 }
 
 /* Search Form things */
