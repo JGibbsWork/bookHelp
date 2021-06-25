@@ -6,7 +6,7 @@ export default function Home () {
   return (
     <div className="homeMain">
       <div className="Title">
-        <a>TRENDS</a>
+        <span>TRENDS</span>
       </div>
       <div className="topBox">
         <h5 className="boxTitle">About</h5>
@@ -25,6 +25,7 @@ export default function Home () {
         <div className="searchBox">
           <p className="submit" onClick={()=>history.push('/feed')} >FEED</p>
         </div>
+        <br/>
       </div>
       <div className="bottomBox">
         <h5 className="boxTitle">New Searches</h5>
@@ -36,6 +37,7 @@ export default function Home () {
         <div className="searchBox">
           <p className="submit" onClick={()=>history.push('/post')}>New Search</p>
         </div>
+        <br/>
       </div>
     </div>
   )

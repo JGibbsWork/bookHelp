@@ -21,7 +21,7 @@ export default function Header () {
         to={{ pathname: '/post' }}
         style={{ textDecoration: "none"}}
         className="link" >
-          <h3>POST</h3>
+          <h3>SEARCH</h3>
         </Link>
       </div>
       <div className="spacer">&nbsp;</div>
