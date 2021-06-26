@@ -1,12 +1,24 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import CitySelect from './CitySelect.js';
 import SearchTerm from './SearchTerm.js';
 import SearchIt from './SearchIt.js';
+import { Link, useHistory } from 'react-router-dom';
 
 export default function Form () {
 
-  const [city, setCity] = useState('');
+  let history = useHistory();
+
+  const [city, setCity] = useState('New York');
   const [search, setSearch] = useState('');
+
+  function handleSubmit (e) {
+      let cityS = city.replace(/\s/g, '+');
+      let searchS = search.replace(/\s/g, '+');
+      axios.post(`/${cityS}/${searchS}`)
+      history.push('/feed')
+      
+  }
 
   function onSelect(e) {
     setCity(e.target.value);
@@ -24,7 +36,7 @@ export default function Form () {
         <div className="formSubTitle">
           <p>Select a city and type in a search term to see how often people are searching for that term. This will produce a comparison on averages from city, state and national search frequencies.</p>
           <br/>
-          <form>
+          <form onSubmit={handleSubmit}>
             <label>Select a city:</label>
             <br/>
             <CitySelect onSelect={onSelect}/>

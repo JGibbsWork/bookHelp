@@ -1,26 +1,33 @@
 import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import SingleResult from './SingleResult.js';
 
-export default function ResList () {
+function ResList () {
   let [history, setHistory] = useState([]);
   let [loading, setLoading] = useState(true);
 
   useEffect(() => {
+
     if (loading) {
-      axios.get('/results/all')
+      window.setTimeout(letsGo, 1000);
+    }
+  })
+
+  function letsGo () {
+    axios.get('/results/all')
       .then((results) => {
         setHistory(results.data.reverse());
         setLoading(false);
       })
       .catch((err) => {console.log('whoop')})
-    }
-  })
+  }
+
 
   if (loading) {
     return (
       <div>
-        hold on a sec bb
+        hold on a sec
       </div>
     )
   } else {
@@ -42,3 +49,5 @@ export default function ResList () {
     )
   }
 }
+
+export default withRouter(ResList);
