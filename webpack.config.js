@@ -21,6 +21,7 @@ module.exports = {
     ],
   },
   resolve: {
+    symlinks: false,
     extensions: ['.js', '.jsx'],
   },
 };
