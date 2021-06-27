@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
-import SingleResult from './SingleResult.js';
+import SingleResult from './SingleResult';
 
 function ResList () {
   let [history, setHistory] = useState([]);

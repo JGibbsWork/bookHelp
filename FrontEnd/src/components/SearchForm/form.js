@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import CitySelect from './CitySelect.js';
-import SearchTerm from './SearchTerm.js';
-import SearchIt from './SearchIt.js';
+import CitySelect from './CitySelect';
+import SearchTerm from './SearchTerm';
+import SearchIt from './SearchIt';
 import { Link, useHistory } from 'react-router-dom';
 
 export default function Form () {
@@ -17,7 +17,7 @@ export default function Form () {
       let searchS = search.replace(/\s/g, '+');
       axios.post(`/${cityS}/${searchS}`)
       history.push('/feed')
-      
+
   }
 
   function onSelect(e) {

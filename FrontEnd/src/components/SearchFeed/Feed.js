@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ResList from './ResList.js';
+import ResList from './ResList';
 
 export default function Feed () {
 

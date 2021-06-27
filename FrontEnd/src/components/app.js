@@ -1,5 +1,5 @@
 import React from 'react';
-import Routes from './Router/Routes.js';
+import Routes from './Router/Routes';
 
 export default function BookHelp () {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import cityList from './cityList.js'
+import cityList from './cityList'
 
 export default function CitySelect (props) {
   return (
