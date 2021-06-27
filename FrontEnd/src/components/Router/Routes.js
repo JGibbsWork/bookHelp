@@ -6,7 +6,7 @@ import Feed from '../SearchFeed/Feed.js';
 import Form from '../SearchForm/Form.js'
 import Home from '../Home/Home.js'
 
-export default function AppRouter () {
+export default function Routee () {
   return (
     <Router>
       <Header />

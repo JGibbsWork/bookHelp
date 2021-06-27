@@ -5,8 +5,9 @@
   "main": "Backend/server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon",
-    "build": "webpack -w"
+    "start": "node ./Backend/server/index.js",
+    "build": "webpack -w",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",

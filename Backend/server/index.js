@@ -6,7 +6,7 @@ const googleTrends = require('google-trends-api');
 const cors = require('cors');
 const router = require('./router.js');
 
-const port = 3002;
+const port = process.env.PORT || 3002;
 const server = express();
 
 server.use(bodyParser.json());
@@ -21,7 +21,7 @@ server.use((req, res, next) => {
 });
 
 // remove this before deployment
-server.use(morgan('dev'));
+//server.use(morgan('dev'));
 
 server.use(express.static(path.join(__dirname, '../../FrontEnd/dist/')));
 server.use('/', router);

@@ -26,7 +26,7 @@ function ResList () {
 
   if (loading) {
     return (
-      <div>
+      <div className="loading">
         hold on a sec
       </div>
     )
