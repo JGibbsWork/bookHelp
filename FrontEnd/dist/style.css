@@ -3,7 +3,6 @@ html{
   font-family: 'Poppins', sans-serif;
 }
 
-
 h5 {
   appearance: none;
   background-color: transparent;
@@ -16,6 +15,7 @@ h5 {
   cursor: inherit;
   margin:auto;
 }
+
 button, input[type="submit"], input[type="reset"] {
 	background: none;
 	color: inherit;
@@ -29,6 +29,7 @@ button, input[type="submit"], input[type="reset"] {
   margin-block-start: 1em;
   margin-block-end: 1em;
 }
+
 /* Header things */
 .header {
   background-color: #8EAEBD;
@@ -50,6 +51,7 @@ h3 {
 h3:hover {
   color:#CF6766;
 }
+
 .spacer {
   width: 100%;
   height: 95px;
@@ -68,6 +70,7 @@ h3:hover {
   font-size: larger;
   padding-left: 2%;
 }
+
 a.firstCardInfo {
   padding-right: 2%;
 }
@@ -76,6 +79,7 @@ a.firstCardInfo {
   float: right;
   opacity: 40%;
 }
+
 a.term {
   font-weight: 700;
   color: #30415D;
@@ -101,6 +105,7 @@ a.city {
   width: 80%;
   margin: auto;
 }
+
 .Title{
   text-align: center;
   font-size: 500%;
@@ -110,13 +115,19 @@ a.city {
   color: #CF6766;
   text-shadow: 1px 1px 1px #8EAEBD, 3px 3px 5px #30415D;
 }
+
 .boxTitle {
   font-weight: 700;
   font-size: 200%;
   text-align: center;
 }
+
+.textBox {
+  width: 85%;
+  margin: auto;
+}
+
 .topBox{
-  width:55%;
   background: #d8d8c6;
   border: 10px solid #CF6766;
   margin:3%;
@@ -126,8 +137,8 @@ a.city {
     inset 0 0 0 8px #8EAEBD;
   padding:1%;
 }
+
 .midBox{
-  width:55%;
   background: #d8d8c6;
   border:10px solid #8EAEBD;
   margin-bottom: 3%;
@@ -136,8 +147,8 @@ a.city {
     inset 0 0 0 8px #CF6766;
   padding:1%;
 }
+
 .bottomBox{
-  width:55%;
   background: #d8d8c6;
   border:10px solid #CF6766;
   margin-bottom: 3%;
@@ -147,9 +158,32 @@ a.city {
   padding:1%;
 }
 
-.textBox {
-  width: 85%;
-  margin: auto;
+@media (orientation: landscape){
+  .topBox{
+    width:55%;
+  }
+
+  .midBox{
+    width:55%;
+  }
+
+  .bottomBox{
+    width:55%;
+  }
+}
+
+@media (orientation: portrait) {
+  .topBox{
+    width:80%;
+  }
+
+  .midBox{
+    width:80%;
+  }
+
+  .bottomBox{
+    width:80%;
+  }
 }
 
 /* Search Form things */
@@ -168,10 +202,12 @@ a.city {
   background: #d8d8c6;
   border-radius: 2%;
 }
+
 h1 {
   margin: auto;
   font-size: 50px;
 }
+
 .formSubTitle {
   margin-left: 10%;
   margin-right: 10%;
@@ -226,9 +262,11 @@ select {
   border-radius: 4px;
   transition: 180ms box-shadow ease-in-out;
 }
+
 p.searchBox {
   display: inline-block;
 }
+
 .searchBox{
   margin: auto;
   display: block;
@@ -245,6 +283,7 @@ p.searchBox {
   font-size: 100%;
   transition: all 0.2s;
   }
+
   .searchBox:hover {
   color:#000000;
   background-color:#FFFFFF;
